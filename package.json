@@ -6,8 +6,7 @@
     "author": "= <Arch1010#4338 [Discord]>",
     "license": "MIT",
     "scripts": {
-      "fetch": "node fetch-data.js",
-      "start": "node start.js"
+      
     }
   }
   
