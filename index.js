@@ -34,6 +34,10 @@ dataselect.replaceChildren();
 dataselect.append(divider);
 dataselect.append(document.createElement('br'));
 document.getElementById('Hiddeninfo').value = document.getElementById("dropdown").value;
+try {
+  divdata.replaceChildren();
+} catch (e) {
+}
 secdropdown();
 }
 async function endText() {
@@ -138,28 +142,21 @@ async function fetchdata() {
       var fetcheddata = JSON.parse(this.response);
       for (var i = 0; i < fetcheddata.length; i++){
         if(fetcheddata[i].name == fetchrequest) {
-          
+          dp1.textContent = `Class Name: ${fetcheddata[i].name}`
+          dp2.textContent = `Class Type: ${fetcheddata[i].type}`
+          dp3.textContent = `Unique: ${fetcheddata[i].unique}`
+          dp4.textContent = `Guaranteed: ${fetcheddata[i].guaranteed}`
+          dp5.textContent = `Class Description: ${fetcheddata[i].description}`
+          dp6.textContent = `Faction: ${fetcheddata[i].faction}`
+          dp7.textContent = `Win Condition: ${fetcheddata[i].wincon}`
+          dp8.textContent = `Day Skills: ${fetcheddata[i].day_skills}`
+          dp9.textContent = `Night Skills: ${fetcheddata[i].night_skills}`
+          dp10.textContent = `Passive Skills: ${fetcheddata[i].passiveskills}`
+          dp11.textContent = `Capture Chance: ${fetcheddata[i].capture_chance}`
         }
       }
     }
     request.send();
   }
-  /*
-     request.open('GET', 'classData.json', true)
-    request.onload = function () {
-      var classdata = JSON.parse(this.response)
-      for (var i = 0; i < classdata.length; i++) {
-        classes.push(classdata[i].name)
-      }
-      for (const val3 of classes) {
-        var option = document.createElement("option");
-        option.value = val3; 
-        option.text = val3;
-        datadown.appendChild(option);
-    }
-    }
-    request.send()
-}
-  */
 }
 startup();
