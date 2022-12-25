@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<title>Untrusted Info</title>
+<style>
+    a {
+        color:#00FF01;
+    }
+    body {
+        color:white;
+        background-color: black;
+        font-family: "Share Tech Mono", monospace;
+    }
+    .Hiddeninfo {
+        color:black;
+        user-select: none;
+    }
+    .opt{
+        color:white;
+        background-color: black;
+        font-family: "Share Tech Mono", monospace;
+        border-width: 4px;
+        border-color: rgb(97, 97, 97);
+    }
+    .opt2{
+        color:white;
+        background-color: black;
+        font-family: "Share Tech Mono", monospace;
+        border-width: 4px;
+        border-color: rgb(34, 34, 34);  
+    }
+</style>
+</head>
+<body>
+<h1 class="Body">Untrusted Role Data</h1>
+<div id="select"> <!-- Div is empty due to startup function in index.js. Bottom-most line. --></div>
+<div id="dataselect"></div>
+<div id="data"></div>
+<div id="bottomendtext"></div>
+<script src="https://cdn.jsdelivr.net/npm/fetch-json@3.0/dist/fetch-json.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xmlhttprequest@1.8.0/lib/XMLHttpRequest.min.js"></script>
+<script src="fetch-data.js"></script>
+<script src="elements.js"></script>
+<script src="index.js"></script>
+<b1 class="Hiddeninfo"id="Hiddeninfo"value="placeholder">placeholder</b1>
+</body>
+</html>
