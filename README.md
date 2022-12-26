@@ -7,6 +7,12 @@ You could also use this data by using the Discord bot in Untrusted's Discord ([h
 
 ## Change Logs
 
+v1.0.1 NOTE: Abandon Packageable since it would be hard to do.
+-Way to host by youtself: Clone/Download this repository.
+-Open in VS Code (Visual Studio Code) {No idea if any other editors work.}
+-Get an extension named "Live Server".
+-Run the live server.
+
 v1.0.1 - Classes updated and completed for actions. Out of things to add so time to create a packageable version of this website instead.
 
 v1.0.0 - All skills added. Set up GitHub basics.

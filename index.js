@@ -154,6 +154,9 @@ async function fetchdata() {
           dp9.textContent = `Night Skills: ${fetcheddata[i].night_skills}`
           dp10.textContent = `Passive Skills: ${fetcheddata[i].passiveskills}`
           dp11.textContent = `Capture Chance: ${fetcheddata[i].capture_chance}`
+          console.log(fetcheddata[i].capture_chance);
+          if (fetcheddata[i].passiveskills == undefined)  dp10.textContent = `Passive Skills: none`
+          if (fetcheddata[i].capture_chance == undefined) dp11.textContent = `Capture Chance: not able to hack`
           console.log(`${fetcheddata[i].name} (class) was fetched.`);
         }
       }

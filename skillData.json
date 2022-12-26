@@ -1,41 +1,15 @@
 [
 	{
-		"id":"1",
-		"name":"Hack Target",
-		"aliases":"hack target",
-		"description":"Try pwning the machine. The more people try to hack the same node, the more likely the capture. (Targets the node and leaves a log)",
-		"type":"Day",
-		"targets":"Node",
+		"id":"94",
+		"name":"AGENT Training",
+		"aliases":"agent training",
+		"description":"Every Field Agent's training is unique. (Assigns you one of the following random skills: 'Misdirection,&#039, 'Follow,' 'Interrogate,' or 'Throw Under the Bus')",
+		"type":"Night",
+		"targets":"None",
 		"Cooldown_in_days":"0",
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
-		"RNG_based_success":"Yes"
-	},
-	{
-		"id":"2",
-		"name":"Emergency Extraction",
-		"aliases":"emergency extraction",
-		"description":"Send a hired team to move a targeted operative to a safe hideout.",
-		"type":"Night",
-		"targets":"Players",
-		"Cooldown_in_days":"2",
-		"Visits_target":"No",
-		"Occupies_target":"No",
-		"Maximum_uses":"3",
-		"RNG_based_success":"No"
-	},
-	{
-		"id":"4",
-		"name":"0-Day Exploit",
-		"aliases":"0-day exploit",
-		"description":"You have been saving this '0-day Exploit' for a special occasion. This is likely it, so try not to waste it. (100% chance to capture a node)",
-		"type":"Day",
-		"targets":"Node",
-		"Cooldown_in_days":"0",
-		"Visits_target":"No",
-		"Occupies_target":"No",
-		"Maximum_uses":"1",
 		"RNG_based_success":"No"
 	},
 	{
@@ -222,8 +196,8 @@
 	},
 	{
 		"id":"73",
-		"name":"Citizen's Arrest",
-		"aliases":"citizen's arrest",
+		"name":"Citizen&#039;s Arrest",
+		"aliases":"citizen&#039;s arrest",
 		"description":"Attempt to arrest your target. Years spent in the force allow you to follow their protocol seamlessly: your cover will stay safe (from everyone but Journalists) if you fail.",
 		"type":"Night",
 		"targets":"Players",
@@ -390,6 +364,19 @@
 		"RNG_based_success":"No"
 	},
 	{
+		"id":"2",
+		"name":"Emergency Extraction",
+		"aliases":"emergency extraction",
+		"description":"Send a hired team to move a targeted operative to a safe hideout.",
+		"type":"Night",
+		"targets":"Players",
+		"Cooldown_in_days":"2",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"3",
+		"RNG_based_success":"No"
+	},
+	{
 		"id":"61",
 		"name":"Escort",
 		"aliases":"escort",
@@ -413,6 +400,19 @@
 		"Visits_target":"Yes",
 		"Occupies_target":"Yes",
 		"Maximum_uses":"1",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"95",
+		"name":"Fake Escort",
+		"aliases":"fake escort",
+		"description":"Pose as an enforcer and escort your target to a new hideout. You will bail at any sign of danger, and won't actually protect your target. ",
+		"type":"Night",
+		"targets":"Players",
+		"Cooldown_in_days":"0",
+		"Visits_target":"Yes",
+		"Occupies_target":"Yes",
+		"Maximum_uses":"unlimited",
 		"RNG_based_success":"No"
 	},
 	{
@@ -468,6 +468,19 @@
 		"RNG_based_success":"No"
 	},
 	{
+		"id":"1",
+		"name":"Hack Target",
+		"aliases":"hack target",
+		"description":"Try pwning the machine. The more people try to hack the same node, the more likely the capture. (Targets the node and leaves a log)",
+		"type":"Day",
+		"targets":"Node",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"unlimited",
+		"RNG_based_success":"Yes"
+	},
+	{
 		"id":"52",
 		"name":"Harden Node",
 		"aliases":"harden node",
@@ -478,6 +491,19 @@
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"2",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"91",
+		"name":"High Priority Target",
+		"aliases":"high priority target",
+		"description":"This high-profile operative is wanted internationally. Bounty Hunters gain an additional bounty (+1) when contributing to this operative's arrest.",
+		"type":"Passive",
+		"targets":"None",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"unlimited",
 		"RNG_based_success":"No"
 	},
 	{
@@ -517,6 +543,19 @@
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"2",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"96",
+		"name":"Insurance",
+		"aliases":"insurance",
+		"description":"You discovered the Operation Leader's identity and have asked a trusted friend to reveal it publicly in the event of your death.",
+		"type":"Passive",
+		"targets":"None",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"unlimited",
 		"RNG_based_success":"No"
 	},
 	{
@@ -608,6 +647,19 @@
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"92",
+		"name":"Keylogger Honeypot",
+		"aliases":"keylogger honeypot",
+		"description":"Configure this machine as a honeypot. An Inside Man will have no idea, and any keylogger used on it will instead make the machine harder to hack.",
+		"type":"Day",
+		"targets":"Node",
+		"Cooldown_in_days":"3",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"2",
 		"RNG_based_success":"No"
 	},
 	{
@@ -718,7 +770,7 @@
 		"id":"102",
 		"name":"NETSEC Background",
 		"aliases":"netsec background",
-		"description":"You have hacked for NETSEC for many years. (Assigns you one of the following random skills: 'Denial of Service', 'Impersonate,' or 'Wireshark')",
+		"description":"You have hacked for NETSEC for many years. (Assigns you one of the following random skills: 'Denial of Service,&#039, 'Impersonate,' or 'Wireshark')",
 		"type":"Day",
 		"targets":"None",
 		"Cooldown_in_days":"0",
@@ -1180,6 +1232,19 @@
 		"Visits_target":"Yes",
 		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"4",
+		"name":"0-Day Exploit",
+		"aliases":"0-day exploit",
+		"description":"You have been saving this '0-day Exploit' for a special occasion. This is likely it, so try not to waste it. (100% chance to capture a node)",
+		"type":"Day",
+		"targets":"Node",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"1",
 		"RNG_based_success":"No"
 	}
 ]
