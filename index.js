@@ -133,7 +133,7 @@ async function fetchdata() {
          }
          console.log(`${fetcheddata[i].name} (skill) was fetched.`);
          var image = document.createElement('img')
-          image.src = `/skillpictures/${fetcheddata[i].id}.png`
+          image.src = `https://arch881010.github.io/data-website-untrusted/skillpictures/${fetcheddata[i].id}.png`
           image.setAttribute("height","69px");
           image.setAttribute("width","69px");
           image.setAttribute("id","image");
@@ -170,7 +170,7 @@ async function fetchdata() {
 
 
           var image = document.createElement('img')
-          image.src = `/classpictures/${fetcheddata[i].id}.png`
+          image.src = `https://arch881010.github.io/data-website-untrusted/classpictures/${fetcheddata[i].id}.png`
           image.setAttribute("height","69px");
           image.setAttribute("width","69px");
           image.setAttribute("id","image");
