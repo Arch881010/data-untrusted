@@ -79,7 +79,7 @@ dp1.setAttribute('id','dp1')
 //End Creating Elements
 //Start Adding Options/Values
     //startDrop
-    dropdownopt = ["Skills", "Classes"]
+    dropdownopt = ["Classes","Skills"]
     for (const val of dropdownopt)
     {
         var option = document.createElement("option");
