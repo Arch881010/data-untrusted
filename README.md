@@ -7,6 +7,8 @@ You could also use this data by using the Discord bot in Untrusted's Discord ([h
 
 ## Change Logs
 
+v1.0.2 - Made content look cleaner and added a background. Also added an image of the role/skill. Added spacing bewteen the Day Skills, and Night Skills.
+
 v1.0.1 NOTE: Abandon Packageable since it would be hard to do.
 
 Way to host by yourself: Clone/Download this repository.
