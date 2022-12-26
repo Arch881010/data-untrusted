@@ -132,6 +132,14 @@ async function fetchdata() {
           divdata.removeChild(br1234);
          }
          console.log(`${fetcheddata[i].name} (skill) was fetched.`);
+         var image = document.createElement('img')
+          image.src = `/skillpictures/${fetcheddata[i].id}.png`
+          image.setAttribute("height","69px");
+          image.setAttribute("width","69px");
+          image.setAttribute("id","image");
+          image.setAttribute("user-select","none")
+          document.getElementById("dp1").before(image);
+          document.getElementById("image").after(document.createElement("br"))
         }
       }
     }
@@ -157,7 +165,17 @@ async function fetchdata() {
           console.log(fetcheddata[i].capture_chance);
           if (fetcheddata[i].passiveskills == undefined)  dp10.textContent = `Passive Skills: none`
           if (fetcheddata[i].capture_chance == undefined) dp11.textContent = `Capture Chance: not able to hack`
+
           console.log(`${fetcheddata[i].name} (class) was fetched.`);
+
+
+          var image = document.createElement('img')
+          image.src = `/classpictures/${fetcheddata[i].id}.png`
+          image.setAttribute("height","69px");
+          image.setAttribute("width","69px");
+          image.setAttribute("id","image");
+          document.getElementById("dp1").before(image);
+          document.getElementById("image").after(document.createElement("br"))
         }
       }
     }
