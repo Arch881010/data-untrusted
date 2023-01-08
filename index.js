@@ -12,6 +12,11 @@ classData.href="classData.json";
 classData.textContent="classData.json";
 classData.setAttribute("download","classData.json");
 uh = "uh"
+var placeholderimage = document.createElement('img');
+placeholderimage.src = `https://arch881010.github.io/allpngs/blank.png`;
+placeholderimage.setAttribute("height","69px");
+placeholderimage.setAttribute("width","69px");
+placeholderimage.setAttribute("id","placeholderimage");
 var request = new XMLHttpRequest()
 const hiddeninfo = document.getElementById("Hiddeninfo");
 const select = document.getElementById("select");
@@ -96,6 +101,8 @@ async function fetchdata() {
   } else {
     divdata.append(dp1,document.createElement('br'),dp2,document.createElement('br'),dp3,document.createElement('br'),dp4,document.createElement('br'),dp5,document.createElement('br'),dp6,br1234,dp7,br123,dp8,document.createElement('br'),dp9)
   }
+  document.getElementById('dp1').before(placeholderimage);
+  document.getElementById("placeholderimage").after(document.createElement("br"))
   if (document.getElementById('Hiddeninfo').value == "Skills"){
     var request = new XMLHttpRequest();
     request.open("GET", "skillData.json", true);
@@ -103,6 +110,13 @@ async function fetchdata() {
       var fetcheddata = JSON.parse(this.response);
       for (var i = 0; i < fetcheddata.length; i++){
         if(fetcheddata[i].name == fetchrequest) {
+         var image = document.createElement('img')
+         image.src = `https://arch881010.github.io/data-website-untrusted/skillpictures/${fetcheddata[i].id}.png`
+         image.setAttribute("height","69px");
+         image.setAttribute("width","69px");
+         image.setAttribute("id","image");
+         image.setAttribute("user-select","none")
+         document.getElementById('placeholderimage').replaceWith(image)
          dp1.textContent = `Skill Name: ${fetchrequest}`;
          dp2.textContent = `Skill Description: ${fetcheddata[i].description}`;
          dp3.textContent = `Time Used: ${fetcheddata[i].type}`;
@@ -132,14 +146,6 @@ async function fetchdata() {
           divdata.removeChild(br1234);
          }
          console.log(`${fetcheddata[i].name} (skill) was fetched.`);
-         var image = document.createElement('img')
-          image.src = `https://arch881010.github.io/data-website-untrusted/skillpictures/${fetcheddata[i].id}.png`
-          image.setAttribute("height","69px");
-          image.setAttribute("width","69px");
-          image.setAttribute("id","image");
-          image.setAttribute("user-select","none")
-          document.getElementById("dp1").before(image);
-          document.getElementById("image").after(document.createElement("br"))
         }
       }
     }
@@ -151,6 +157,12 @@ async function fetchdata() {
       var fetcheddata = JSON.parse(this.response);
       for (var i = 0; i < fetcheddata.length; i++){
         if(fetcheddata[i].name == fetchrequest) {
+          var image = document.createElement('img')
+          image.src = `https://arch881010.github.io/data-website-untrusted/classpictures/${fetcheddata[i].id}.png`
+          image.setAttribute("height","69px");
+          image.setAttribute("width","69px");
+          image.setAttribute("id","image");
+          document.getElementById('placeholderimage').replaceWith(image)
           dp1.textContent = `Class Name: ${fetcheddata[i].name}`
           dp2.textContent = `Class Type: ${fetcheddata[i].type}`
           dp3.textContent = `Unique: ${fetcheddata[i].unique}`
@@ -167,15 +179,6 @@ async function fetchdata() {
           if (fetcheddata[i].capture_chance == undefined) dp11.textContent = `Capture Chance: not able to hack`
 
           console.log(`${fetcheddata[i].name} (class) was fetched.`);
-
-
-          var image = document.createElement('img')
-          image.src = `https://arch881010.github.io/data-website-untrusted/classpictures/${fetcheddata[i].id}.png`
-          image.setAttribute("height","69px");
-          image.setAttribute("width","69px");
-          image.setAttribute("id","image");
-          document.getElementById("dp1").before(image);
-          document.getElementById("image").after(document.createElement("br"))
         }
       }
     }
