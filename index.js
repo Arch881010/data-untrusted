@@ -145,7 +145,6 @@ async function fetchdata() {
           divdata.removeChild(br123)
           divdata.removeChild(br1234);
          }
-         console.log(`${fetcheddata[i].name} (skill) was fetched.`);
         }
       }
     }
@@ -174,11 +173,9 @@ async function fetchdata() {
           dp9.textContent = `Night Skills: ${fetcheddata[i].night_skills}`
           dp10.textContent = `Passive Skills: ${fetcheddata[i].passiveskills}`
           dp11.textContent = `Capture Chance: ${fetcheddata[i].capture_chance}`
-          console.log(fetcheddata[i].capture_chance);
           if (fetcheddata[i].passiveskills == undefined)  dp10.textContent = `Passive Skills: none`
           if (fetcheddata[i].capture_chance == undefined) dp11.textContent = `Capture Chance: not able to hack`
 
-          console.log(`${fetcheddata[i].name} (class) was fetched.`);
         }
       }
     }
