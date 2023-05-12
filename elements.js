@@ -18,7 +18,7 @@ const datasubmit = document.createElement('button');
 datasubmit.id="datasubmit";
 datasubmit.setAttribute('class','opt');
 datasubmit.textContent = "Search";
-datasubmit.setAttribute("onclick","fetchdata();")
+datasubmit.setAttribute("onclick", "fetchdata();")
     //secdropown
 const secdropown = document.createElement('select');
     //startDrop
@@ -79,7 +79,7 @@ dp1.setAttribute('id','dp1')
 //End Creating Elements
 //Start Adding Options/Values
     //startDrop
-    dropdownopt = ["Classes","Skills"]
+    dropdownopt = ["Classes", "Skills"]
     for (const val of dropdownopt)
     {
         var option = document.createElement("option");

@@ -3,7 +3,7 @@
 		"id":"94",
 		"name":"AGENT Training",
 		"aliases":"agent training",
-		"description":"Every Field Agent's training is unique. (Assigns you one of the following random skills: 'Misdirection,' 'Follow,' 'Interrogate,' or 'Throw Under the Bus')",
+		"description":"Every Field Agent's training is unique. (Assigns you one of the following random skills: 'Misdirection,', 'Follow,' 'Interrogate,' or 'Throw Under the Bus')",
 		"type":"Night",
 		"targets":"None",
 		"Cooldown_in_days":"0",
@@ -91,15 +91,28 @@
 		"RNG_based_success":"No"
 	},
 	{
+		"id":"108",
+		"name":"Arrest Recording",
+		"aliases":"arrest recording",
+		"description":"Visit the target hideout and start recording. If AGENT comes knocking, you will take this opportunity for an instant article. ",
+		"type":"Night",
+		"targets":"Players",
+		"Cooldown_in_days":"0",
+		"Visits_target":"Yes",
+		"Occupies_target":"No",
+		"Maximum_uses":"2",
+		"RNG_based_success":"No"
+	},
+	{
 		"id":"58",
 		"name":"Ask The Right Question",
 		"aliases":"ask the right question",
-		"description":"Visit someone tonight to discuss the hack in person. Learn if that person has a legitimate 'Hack Target' skill.",
+		"description":"Visit someone tonight to discuss the hack in person and learn how many nodes they have successfully hacked so far.",
 		"type":"Night",
 		"targets":"Players",
 		"Cooldown_in_days":"3",
 		"Visits_target":"Yes",
-		"Occupies_target":"No",
+		"Occupies_target":"Yes",
 		"Maximum_uses":"2",
 		"RNG_based_success":"No"
 	},
@@ -234,6 +247,19 @@
 		"RNG_based_success":"No"
 	},
 	{
+		"id":"106",
+		"name":"Cover Support",
+		"aliases":"cover support",
+		"description":"Call in all your department resources to maintain a NETSEC cover for the target operative, which will be doxxed as NETSEC this night.",
+		"type":"Night",
+		"targets":"Players",
+		"Cooldown_in_days":"0",
+		"Visits_target":"Yes",
+		"Occupies_target":"No",
+		"Maximum_uses":"3",
+		"RNG_based_success":"No"
+	},
+	{
 		"id":"9",
 		"name":"Cover Your Tracks",
 		"aliases":"cover your tracks",
@@ -245,6 +271,19 @@
 		"Occupies_target":"No",
 		"Maximum_uses":"2",
 		"RNG_based_success":"Yes"
+	},
+	{
+		"id":"105",
+		"name":"CQC Expert",
+		"aliases":"cqc expert",
+		"description":"You have been trained in Close Quarter Combat: murder attempts are less likely to succeed against you.",
+		"type":"Passive",
+		"targets":"None",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"unlimited",
+		"RNG_based_success":"No"
 	},
 	{
 		"id":"72",
@@ -270,6 +309,19 @@
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"2",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"109",
+		"name":"Critical Thinking",
+		"aliases":"critical thinking",
+		"description":"Stay up all night studying your hacking mistakes. Each failed hack grants you a use of this skill, which permanently improves your hacking chance.",
+		"type":"Night",
+		"targets":"None",
+		"Cooldown_in_days":"0",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"unlimited",
 		"RNG_based_success":"No"
 	},
 	{
@@ -344,10 +396,10 @@
 		"description":"By doxxing and stalking the target, you'll gain intel about them. (Learn the faction of the target player)",
 		"type":"Night",
 		"targets":"Players",
-		"Cooldown_in_days":"4",
+		"Cooldown_in_days":"0",
 		"Visits_target":"Yes",
 		"Occupies_target":"No",
-		"Maximum_uses":"2",
+		"Maximum_uses":"1",
 		"RNG_based_success":"No"
 	},
 	{
@@ -656,10 +708,10 @@
 		"description":"Configure this machine as a honeypot. An Inside Man will have no idea, and any keylogger used on it will instead make the machine harder to hack.",
 		"type":"Day",
 		"targets":"Node",
-		"Cooldown_in_days":"3",
+		"Cooldown_in_days":"0",
 		"Visits_target":"No",
 		"Occupies_target":"No",
-		"Maximum_uses":"2",
+		"Maximum_uses":"1",
 		"RNG_based_success":"No"
 	},
 	{
@@ -770,7 +822,7 @@
 		"id":"102",
 		"name":"NETSEC Background",
 		"aliases":"netsec background",
-		"description":"You have hacked for NETSEC for many years. (Assigns you one of the following random skills: 'Denial of Service, 'Impersonate,' or 'Wireshark')",
+		"description":"You have hacked for NETSEC for many years. (Assigns you one of the following random skills: 'Denial of Service,', 'Impersonate,' or 'Wireshark')",
 		"type":"Day",
 		"targets":"None",
 		"Cooldown_in_days":"0",
@@ -822,12 +874,12 @@
 		"id":"103",
 		"name":"Obtain Evidence",
 		"aliases":"obtain evidence",
-		"description":"Trick a target player tonight to discuss important matters and obtain evidence on them. (Visit the target and occupies the player. Increases payout if you win.)",
+		"description":"Break into the hideout of the target operative to collect incriminating evidence of their involvement in the hacking operation.",
 		"type":"Night",
 		"targets":"Players",
 		"Cooldown_in_days":"2",
 		"Visits_target":"Yes",
-		"Occupies_target":"Yes",
+		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
 		"RNG_based_success":"No"
 	},
@@ -861,7 +913,7 @@
 		"id":"78",
 		"name":"Planned Raid",
 		"aliases":"planned raid",
-		"description":"Pose as a NETSEC Enforcer and escort the target to an AGENT-controlled 'safe house' - the target will be arrested by the local police 24 hours later, not exposing you.",
+		"description":"Pose as a NETSEC Enforcer and escort the target to an AGENT-controlled 'safe house' - the target will be later arrested by the local police, not exposing you.",
 		"type":"Night",
 		"targets":"Players",
 		"Cooldown_in_days":"0",
@@ -881,6 +933,19 @@
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
+		"RNG_based_success":"No"
+	},
+	{
+		"id":"107",
+		"name":"Relay Connection",
+		"aliases":"relay connection",
+		"description":"Safely visit the target operative, from a distance, and establish a relay wireless connection, preventing the target from being disconnected.",
+		"type":"Day",
+		"targets":"Players",
+		"Cooldown_in_days":"2",
+		"Visits_target":"No",
+		"Occupies_target":"No",
+		"Maximum_uses":"2",
 		"RNG_based_success":"No"
 	},
 	{
@@ -919,7 +984,7 @@
 		"Cooldown_in_days":"0",
 		"Visits_target":"No",
 		"Occupies_target":"No",
-		"Maximum_uses":"3",
+		"Maximum_uses":"unlimited",
 		"RNG_based_success":"Yes"
 	},
 	{
@@ -1186,14 +1251,14 @@
 		"id":"89",
 		"name":"Wake-up Call",
 		"aliases":"wake-up call",
-		"description":"Listen to your conscience and turn against NETSEC. You will become a Panicked Blabbermouth. (Works only after at least three people have died)",
-		"type":"Night",
+		"description":"Listen to your conscience and turn against NETSEC. You will become a Panicked Blabbermouth. The amount of deaths will increase the chance of turning PB.",
+		"type":"Passive",
 		"targets":"None",
 		"Cooldown_in_days":"0",
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"unlimited",
-		"RNG_based_success":"No"
+		"RNG_based_success":"Yes"
 	},
 	{
 		"id":"68",
@@ -1215,7 +1280,7 @@
 		"description":"Sniff all network traffic, eventually discovering who is executing a 'Denial of Service' attack today.",
 		"type":"Day",
 		"targets":"None",
-		"Cooldown_in_days":"3",
+		"Cooldown_in_days":"2",
 		"Visits_target":"No",
 		"Occupies_target":"No",
 		"Maximum_uses":"3",

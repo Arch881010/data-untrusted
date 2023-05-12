@@ -6,17 +6,17 @@ const divdata = document.getElementById('data');
 const skillData = document.createElement("a");
 skillData.href="skillData.json";
 skillData.textContent="skillData.json";
-skillData.setAttribute("download","skillData.json");
+skillData.setAttribute("download", "skillData.json");
 const classData = document.createElement("a");
 classData.href="classData.json";
 classData.textContent="classData.json";
-classData.setAttribute("download","classData.json");
+classData.setAttribute("download", "classData.json");
 uh = "uh"
 var placeholderimage = document.createElement('img');
 placeholderimage.src = `https://arch881010.github.io/allpngs/blank.png`;
-placeholderimage.setAttribute("height","69px");
-placeholderimage.setAttribute("width","69px");
-placeholderimage.setAttribute("id","placeholderimage");
+placeholderimage.setAttribute("height", "69px");
+placeholderimage.setAttribute("width", "69px");
+placeholderimage.setAttribute("id", "placeholderimage");
 var request = new XMLHttpRequest()
 const hiddeninfo = document.getElementById("Hiddeninfo");
 const select = document.getElementById("select");
@@ -112,10 +112,10 @@ async function fetchdata() {
         if(fetcheddata[i].name == fetchrequest) {
          var image = document.createElement('img')
          image.src = `https://arch881010.github.io/data-website-untrusted/skillpictures/${fetcheddata[i].id}.png`
-         image.setAttribute("height","69px");
-         image.setAttribute("width","69px");
-         image.setAttribute("id","image");
-         image.setAttribute("user-select","none")
+         image.setAttribute("height", "69px");
+         image.setAttribute("width", "69px");
+         image.setAttribute("id", "image");
+         image.setAttribute("user-select", "none")
          document.getElementById('placeholderimage').replaceWith(image)
          dp1.textContent = `Skill Name: ${fetchrequest}`;
          dp2.textContent = `Skill Description: ${fetcheddata[i].description}`;
@@ -158,9 +158,9 @@ async function fetchdata() {
         if(fetcheddata[i].name == fetchrequest) {
           var image = document.createElement('img')
           image.src = `https://arch881010.github.io/data-website-untrusted/classpictures/${fetcheddata[i].id}.png`
-          image.setAttribute("height","69px");
-          image.setAttribute("width","69px");
-          image.setAttribute("id","image");
+          image.setAttribute("height", "69px");
+          image.setAttribute("width", "69px");
+          image.setAttribute("id", "image");
           document.getElementById('placeholderimage').replaceWith(image)
           dp1.textContent = `Class Name: ${fetcheddata[i].name}`
           dp2.textContent = `Class Type: ${fetcheddata[i].type}`
